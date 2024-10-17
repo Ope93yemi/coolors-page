@@ -1,0 +1,36 @@
+.custom-button {
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Default padding, can be customized */
+  font-size: 12px;
+  font-weight: bold; /* Slightly bolder text */
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+  border-radius: 8px; /* Default border radius */
+  border: 1px solid transparent; /* Default border */
+}
+
+/* Button hover effect */
+.custom-button:hover {
+  background-color: rgba(0, 115, 255, 0.8); /* Change background color to a lighter blue on hover */
+  border-color: rgba(0, 115, 255, 0.8); /* Change border color to match background */
+  opacity: 0.95; /* Slightly reduce opacity for a subtle effect */
+}
+
+/* Optional additional styles for different button variants */
+.custom-button.primary {
+  background-color: #0073ff; /* Primary button color */
+  border: 1px solid #0073ff; /* Primary border */
+}
+
+.custom-button.secondary {
+  background-color: #28a745; /* Secondary button color */
+  border: 1px solid #28a745; /* Secondary border */
+}
+
+.custom-button.danger {
+  background-color: #dc3545; /* Danger button color */
+  border: 1px solid #dc3545; /* Danger border */
+}
+
+/* Add more styles as needed */

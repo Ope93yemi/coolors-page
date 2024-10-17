@@ -1,0 +1,73 @@
+.footer {
+    background-color: #f8f8f8; /* Light background color */
+    padding: 40px 0; /* Increased padding for a better look */
+    border-top: 1px solid #ddd; /* Light gray border on top */
+    position: relative; /* For positioning of the divider */
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-around; /* Space out sections evenly */
+    max-width: 1200px;
+    margin: auto; /* Center the footer */
+  }
+  
+  .footer-section {
+    flex: 1; /* Allow sections to grow */
+    padding: 0 15px; /* Padding between sections */
+    min-width: 200px; /* Set a minimum width for better responsiveness */
+  }
+  
+  .footer-section h4 {
+    font-weight: bold;
+    font-size: 1.25em; /* Increased font size for headers */
+    margin-bottom: 10px; /* Space between header and list */
+  }
+  
+  .footer-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+  }
+  
+  .footer-section li {
+    margin-bottom: 5px; /* Space between links */
+  }
+  
+  .footer-section a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark text color */
+    font-size: 1em; /* Set a base font size */
+    transition: color 0.3s; /* Smooth transition for color change */
+  }
+  
+  .footer-section a:hover {
+    color: blue; /* Change text color on hover */
+  }
+  
+  .footer-divider {
+    height: 1px; /* Height of the divider line */
+    background-color: #ddd; /* Light gray color for the line */
+    margin: 20px 0; /* Space around the line */
+  }
+  
+  .footer-attribution {
+    text-align: center; /* Center the attribution text */
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #555; /* Darker color than the footer text */
+    margin-top: 10px; /* Space above the attribution */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack sections vertically on small screens */
+      align-items: center; /* Center sections */
+    }
+  
+    .footer-section {
+      text-align: center; /* Center text in sections */
+      margin-bottom: 20px; /* Space between sections */
+    }
+  }
+  

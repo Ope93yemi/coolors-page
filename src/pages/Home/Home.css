@@ -1,0 +1,294 @@
+/* Base styling for larger screens (default) */
+.hero-section {
+  background-color: #fff;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between; /* Spread text and image apart */
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 40px; /* Add padding to sides for spacing */
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 35%; /* Limit text section width */
+  display: flex;
+  font-family: serif;
+  font-weight: 900;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px; /* Space between text and image */
+}
+
+.hero-title {
+  font-size: 4rem; /* Large title size */
+  font-weight: bolder;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem; /* Subtitle font size */
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between buttons */
+}
+
+button {
+  width: 100%;
+  text-align: center;
+}
+
+/* Transparent button with gray border */
+.transparent-button {
+  background-color: transparent;
+  color: gray;
+  border: 2px solid gray;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 65%; /* Image container takes up the other half */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0; /* Ensure no extra padding */
+  
+  
+}
+
+.hero-image img {
+  width: 110%; /* Make image fill its container */
+  height: 600px;
+  border-radius: 10px;
+  margin-right: -100px; /* Pull image to the right */
+}
+
+/* --------------------- Responsive Adjustments --------------------- */
+
+/* Medium screens (tablets, small desktops) */
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .hero-text {
+    max-width: 80%; /* Increase text section width */
+    margin: 0 0 20px 0; /* Adjust margin */
+  }
+
+  .hero-title {
+    font-size: 3rem; /* Reduce title size */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem; /* Adjust subtitle size */
+  }
+
+  .hero-image {
+    order: -1; /* Make the image appear before the text */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    margin-right: 0; /* Reset margin */
+    border-radius: 8px; /* Slight rounding */
+  }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto; /* Allow hero section to grow with content */
+    padding: 20px 0; /* Add some top-bottom padding */
+  }
+
+  .hero-content {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem; /* Smaller title */
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem; /* Smaller subtitle */
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons {
+    gap: 10px; /* Reduce space between buttons */
+  }
+
+  button {
+    width: 100%;
+    padding: 12px; /* Adjust button size */
+  }
+
+  .transparent-button {
+    padding: 12px; /* Adjust transparent button size */
+  }
+
+  .hero-image {
+    order: -1; /* Ensure image appears first */
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    margin: 0; /* No negative margin */
+  }
+}
+
+/* Extra small screens (mobile devices under 500px) */
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 2rem; /* Further reduce title size */
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem; /* Smaller subtitle */
+  }
+
+  .transparent-button {
+    font-size: 0.8rem; /* Reduce button font size */
+  }
+}
+/* Card Section */
+.card-section {
+  padding: 40px; /* Add padding for spacing */
+  text-align: center; /* Center-align text */
+}
+
+
+/* Container for cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards in a row */
+  gap: 20px; /* Space between the cards */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
+  }
+}
+
+@media (max-width: 500px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Single column on smaller devices */
+  }
+}
+.product-hunt-badge {
+  display: block; /* Ensures it behaves as a block element */
+  margin: 20px auto; /* Centers the badge */
+  width: 225px; /* Default width */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .product-hunt-badge {
+    width: 180px; /* Adjust the width for smaller screens */
+  }
+}
+/* Existing styles for hero section, cards, etc. */
+
+/* Styles for 'Used by 5+ million designers and by top companies' section */
+.used-by-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+.section-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333; /* Darker text color */
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-evenly; /* Ensure icons are spaced evenly */
+  flex-wrap: wrap; /* Wrap icons to the next line on smaller screens */
+  gap: 20px;
+}
+
+.company-icon {
+  font-size: 3rem; /* Adjust size of icons */
+  color: black; /* Default icon color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Indicate that it's interactive */
+}
+
+.company-icon:hover {
+  color: #007bff; /* Hover effect on icons */
+  transform: translateY(-10px); /* Float effect on hover */
+}
+
+/* Responsive Design */
+
+/* For medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .company-icon {
+    font-size: 2.5rem; /* Adjust size on medium screens */
+    
+  }
+}
+
+/* For small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .icons-container {
+    justify-content: center; /* Center the icons */
+    
+  }
+  .company-icon {
+    font-size: 2rem; /* Smaller size on small screens */
+    
+  }
+  
+  /* Display 4 icons per row */
+  .icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-left: 43px;
+  }
+}
+
